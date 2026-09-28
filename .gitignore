@@ -1,0 +1,56 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Go module vendoring (root only; web/assets/vendor holds shipped JS)
+/vendor/
+
+# Go workspace file
+go.work
+
+# Binary output (root only; cmd/server and internal/server are source)
+/server
+/excel-to-md
+
+# Local agent tooling state
+.omo/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Build artifacts
+dist/
+build/
+
+# Local Cloudflare tunnel credentials (never commit)
+deploy/cloudflared/*.json

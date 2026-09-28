@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>excel. — Excel to Markdown tables</title>
+    <meta name="description" content="Excel and CSV files to Markdown tables, instantly. Open several .xlsx, .xls or .csv files, then copy every sheet or just one." />
+    <meta name="theme-color" content="#101010" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://excel.achraf.tn" />
+    <meta property="og:title" content="excel. — Excel to Markdown tables" />
+    <meta property="og:description" content="Excel and CSV files to Markdown tables, instantly." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="excel.achraf.tn" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://excel.achraf.tn" />
+    <meta property="og:image" content="https://excel.achraf.tn/assets/og-image.png" />
+    <meta property="og:image:secure_url" content="https://excel.achraf.tn/assets/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="excel. — Excel files to Markdown tables" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="excel. — Excel to Markdown tables" />
+    <meta name="twitter:description" content="Excel and CSV files to Markdown tables, instantly." />
+    <meta name="twitter:image" content="https://excel.achraf.tn/assets/og-image.png" />
+    <meta name="twitter:image:alt" content="excel. — Excel files to Markdown tables" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/assets/theme-init.js"></script>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  </head>
+  <body>
+    <svg class="sprite" width="0" height="0" aria-hidden="true">
+      <defs>
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2.8v2M12 19.2v2M5.5 5.5l1.4 1.4M17.1 17.1l1.4 1.4M2.8 12h2M19.2 12h2M5.5 18.5l1.4-1.4M17.1 6.9l1.4-1.4" /></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A7.8 7.8 0 0 1 9.5 4.5a7.8 7.8 0 1 0 10 10Z" /></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2.2" /><path d="M15.5 8.5V6.2a1.7 1.7 0 0 0-1.7-1.7H6.2a1.7 1.7 0 0 0-1.7 1.7v7.6c0 .94.76 1.7 1.7 1.7h2.3" /></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" /></symbol>
+        <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4.5v10.5M7.5 11 12 15.5 16.5 11M5 19.5h14" /></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h13.5M13 6.5l5.5 5.5-5.5 5.5" /></symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17" /></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6" /><path d="m15.5 15.5 4 4" /></symbol>
+        <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 4.2 21 19.5H3Z" /><path d="M12 10v4.2M12 16.8v.2" /></symbol>
+        <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2" /><path d="M4 10h16M4 14.5h16M10 10v9" /></symbol>
+        <symbol id="i-hash" viewBox="0 0 24 24"><path d="M9.5 4 8 20M16 4l-1.5 16M4.5 9h15M4 15h15" /></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></symbol>
+      </defs>
+    </svg>
+
+    <!-- ───────── landing ───────── -->
+    <section class="landing" id="landing" aria-labelledby="landingTitle">
+      <header class="landing-bar">
+        <a class="byline" href="https://achraf.tn" target="_blank" rel="noopener">achraf.tn</a>
+        <div class="bar-actions">
+          <a class="icon-btn" href="https://github.com/Ashref-dev/excel-to-md" target="_blank" rel="noopener" aria-label="Source code on GitHub" title="Source on GitHub">
+            <svg class="icon" aria-hidden="true"><use href="#i-github" /></svg>
+          </a>
+          <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Switch theme">
+            <svg class="icon" aria-hidden="true"><use href="#i-sun" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="landing-center">
+        <h1 class="mark" id="landingTitle">
+          <span class="cell" id="cell">
+            <span class="brand-morph">excel<span class="dot">.</span></span>
+            <span class="handle" aria-hidden="true"></span>
+          </span>
+        </h1>
+        <p class="tagline">Excel files to Markdown tables, instantly. <span>Open as many as you like.</span></p>
+
+        <div class="cta">
+          <button class="pill" id="openBtn" type="button">
+            <span class="pill-label">Open files</span>
+            <span class="pill-chip" aria-hidden="true">
+              <svg class="icon"><use href="#i-arrow" /></svg>
+              <span class="spinner"></span>
+            </span>
+          </button>
+          <kbd class="kbd" id="openKbd" aria-hidden="true">⌘ O</kbd>
+        </div>
+        <button class="text-link" id="sampleBtn" type="button">or try two sample files</button>
+
+        <p class="landing-status" id="status" role="status" aria-live="polite"></p>
+      </div>
+
+      <footer class="landing-foot">
+        <span class="formats"><b>.xlsx</b><b>.xls</b><b>.csv</b></span>
+        <span>up to 50 MB each</span>
+      </footer>
+    </section>
+
+    <!-- ───────── workspace ───────── -->
+    <section class="workspace" id="workspace" aria-label="Converted files" hidden>
+      <aside class="side">
+        <div class="side-head">
+          <a class="brand" href="/" aria-label="excel. — start over">
+            <span class="brand-word brand-morph">excel<span class="dot">.</span></span>
+            <span class="brand-by">achraf.tn</span>
+          </a>
+          <div class="side-head-actions">
+            <button class="icon-btn theme-btn compact-only" type="button" data-theme-toggle aria-label="Switch theme">
+              <svg class="icon" aria-hidden="true"><use href="#i-sun" /></svg>
+            </button>
+            <button class="round-btn" id="addBtn" type="button" aria-label="Add files" title="Add files (⌘O)">
+              <svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg>
+            </button>
+          </div>
+        </div>
+
+        <label class="search">
+          <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg>
+          <input id="sheetFilter" type="search" placeholder="Find a sheet" autocomplete="off" aria-label="Find a sheet" />
+          <kbd class="kbd kbd-sm" aria-hidden="true">/</kbd>
+        </label>
+
+        <nav class="files" aria-label="Files and sheets">
+          <ul id="fileList" role="list"></ul>
+          <p class="files-empty" id="filesEmpty" hidden>No sheet matches.</p>
+        </nav>
+
+        <div class="side-foot">
+          <p class="totals" id="totals"></p>
+          <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Switch theme">
+            <svg class="icon" aria-hidden="true"><use href="#i-sun" /></svg>
+          </button>
+        </div>
+      </aside>
+
+      <div class="main">
+        <header class="main-bar">
+          <div class="lens" id="lens" role="group" aria-label="View as">
+            <span class="lens-thumb" aria-hidden="true"></span>
+            <button class="lens-opt" type="button" data-view="table" aria-pressed="true">
+              <svg class="icon" aria-hidden="true"><use href="#i-grid" /></svg><span>Table</span>
+            </button>
+            <button class="lens-opt" type="button" data-view="markdown" aria-pressed="false">
+              <svg class="icon" aria-hidden="true"><use href="#i-hash" /></svg><span>Markdown</span>
+            </button>
+          </div>
+          <div class="main-actions">
+            <button class="ghost-btn" id="downloadAllBtn" type="button" aria-label="Download all as Markdown">
+              <svg class="icon" aria-hidden="true"><use href="#i-down" /></svg>
+              <span>Download all</span>
+            </button>
+            <button class="pill pill-sm pill-go" id="copyAllBtn" type="button">
+              <span class="pill-label">Copy all</span>
+              <span class="pill-count" id="copyAllCount"></span>
+              <span class="pill-chip" aria-hidden="true">
+                <svg class="icon ic-copy"><use href="#i-copy" /></svg>
+                <svg class="icon ic-check"><use href="#i-check" /></svg>
+              </span>
+            </button>
+          </div>
+        </header>
+
+        <div class="sheet-head">
+          <div class="sheet-id">
+            <p class="crumb"><span class="kind" id="crumbKind"></span><span id="crumbFile"></span></p>
+            <h2 id="sheetTitle"></h2>
+            <p class="sheet-meta" id="sheetMeta"></p>
+          </div>
+          <div class="sheet-actions">
+            <button class="act act-copy" id="copySheetBtn" type="button">
+              <svg class="icon ic-copy" aria-hidden="true"><use href="#i-copy" /></svg>
+              <svg class="icon ic-check" aria-hidden="true"><use href="#i-check" /></svg>
+              <span class="act-label">Copy sheet</span>
+            </button>
+            <button class="act" id="downloadSheetBtn" type="button">
+              <svg class="icon" aria-hidden="true"><use href="#i-down" /></svg>
+              <span class="act-label">Download</span>
+            </button>
+          </div>
+        </div>
+
+        <ul class="notes" id="sheetNotes" hidden></ul>
+
+        <div class="stage" id="stage">
+          <div class="view" id="view" tabindex="0" aria-label="Sheet output">
+            <div class="layer layer-table" id="layerTable"></div>
+            <div class="layer layer-md" id="layerMd" hidden></div>
+          </div>
+          <div class="beam" id="beam" aria-hidden="true"></div>
+          <div class="ants" aria-hidden="true"></div>
+        </div>
+
+        <footer class="statusbar">
+          <span class="summary"><i class="led" aria-hidden="true"></i><span id="summary"></span></span>
+          <span class="hints" aria-hidden="true">
+            <span><kbd class="kbd kbd-sm">↑</kbd><kbd class="kbd kbd-sm">↓</kbd> sheet</span>
+            <span><kbd class="kbd kbd-sm">M</kbd> view</span>
+            <span><kbd class="kbd kbd-sm">C</kbd> copy sheet</span>
+          </span>
+        </footer>
+      </div>
+    </section>
+
+    <div class="veil" aria-hidden="true">
+      <div class="ants"></div>
+      <p>Drop to convert</p>
+    </div>
+
+    <input id="fileInput" class="sr-only" type="file" multiple accept=".xlsx,.xlsm,.xls,.csv,.tsv" tabindex="-1" aria-hidden="true" />
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/assets/vendor/marked.umd.js"></script>
+    <script src="/assets/vendor/purify.min.js"></script>
+    <script src="/assets/app.js"></script>
+  </body>
+</html>

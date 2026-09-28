@@ -1,0 +1,5 @@
+ticket,customer,status,priority
+T-1042,Medina Foods,Open,High
+T-1043,Carthage Labs,Waiting on customer,Low
+T-1044,Djerba Tours,Resolved,Medium
+T-1045,Sfax Logistics,Open,High
